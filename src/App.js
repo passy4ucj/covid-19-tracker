@@ -6,7 +6,6 @@ import Table from './Table';
 import LineGraph from './LineGraph';
 import 'leaflet/dist/leaflet.css';
 import { sortData, prettyPrintStat } from './util';
-import numeral from 'numeral';
 import './App.css';
 
 
@@ -73,7 +72,7 @@ function App() {
     //https://disease.sh/v3/covid-19/countries/[COUNTRY_CODE]
   };
 
-  console.log("Country Info >>>", countryInfo);
+  //console.log("Country Info >>>", countryInfo);
   return (
     <div className="app">
       <div className="app__left">
@@ -89,10 +88,6 @@ function App() {
                   <MenuItem value={country.value}>{country.name}</MenuItem>
                 ))
               }
-              {/* <MenuItem value="worldwide">WorldWide</MenuItem>
-              <MenuItem value="worldwide">Option 1</MenuItem>
-              <MenuItem value="worldwide">Option 2</MenuItem>
-              <MenuItem value="worldwide">Option 3</MenuItem> */}
             </Select>
           </FormControl>
         </div>
@@ -132,6 +127,7 @@ function App() {
           center = {mapCenter}
           zoom = {mapZoom}
         />
+        
       </div>
       <Card className="app__right">
         <CardContent>
